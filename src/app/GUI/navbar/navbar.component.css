@@ -1,0 +1,45 @@
+div.navbar{
+    background-color: black;
+    color: white;
+    height: 70px;
+}
+
+ul{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+}
+
+.links li a{
+ margin-right: 20px;
+ padding: 3px;
+ border-radius: 5px;
+}
+
+ul li{
+    list-style: none;
+    display: inline;    
+}
+
+ul li a{
+    text-decoration: none;
+    color:white
+}
+
+ul li a.logo{
+    margin-right: 100px;    
+}
+
+ul .links li a:hover{
+    background-color: white;
+    color: black;    
+}
+
+
+ul li a:left{
+    background-color: white;
+    color: black;    
+}
+
+
