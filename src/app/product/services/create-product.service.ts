@@ -10,8 +10,6 @@ export class CreateProductService {
   constructor(private http:HttpClient) { }
 
   createProduct(product){
-    return this.http.post(`${this.URL}createProduct.php`,JSON.stringify(product))
-
-    
+    return this.http.post(`${this.URL}createProduct.php`,JSON.stringify(product));
   }
 }

@@ -8,6 +8,9 @@ import { CreateProductService } from '../../services/create-product.service';
   styleUrls: ['./create-product.component.css']
 })
 export class CreateProductComponent implements OnInit {
+
+  result:boolean=false;
+  message:string="";
  
   product:Product ={
     id:null,
@@ -21,17 +24,27 @@ export class CreateProductComponent implements OnInit {
   constructor(private createPServ: CreateProductService) { }
 
   ngOnInit(): void {
+    this.message="";
   }
 
   createProduct() {
-    
+    this.result=true;
+    console.log(this.result);    
     this.createPServ.createProduct(this.product).subscribe(
       datos => {
         if(datos['resultado'] == 'OK') {
           alert(datos['mensaje']);
+         
         }
       }
+
+     
     );
+
+    //CREAR NOTIFICACIÓN idependiente
+    if(this.result==true){
+      this.message="Creado exitosamente.";
+    }
   }
 
 }

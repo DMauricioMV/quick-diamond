@@ -1,19 +1,19 @@
-
 <div>
-    <h1>LISTA DE PRODUCTOS</h1>
-  
-    <div>
-      <p> Nombre: <input type="text" [(ngModel)]="product.name" /> </p>
-      <p> Descripción: <input type="text" [(ngModel)]="product.description" /> </p>
-      <p> Price: <input type="number" [(ngModel)]="product.price" /> </p>
-      <p> Returning: <input type="text" [(ngModel)]="product.returning" /> </p>
-      <p> Descount: <input type="number" [(ngModel)]="product.descount" /> </p>
-      <p> 
-        <button (click)="createProduct()">  ADD </button> 
- 
-      </p>
-    </div>
-  
+  <h1>LISTA DE PRODUCTOS</h1>
+
+  <div>
+    <p> Nombre: <input type="text" [(ngModel)]="product.name" /> </p>
+    <p> Descripción: <input type="text" [(ngModel)]="product.description" /> </p>
+    <p> Price: <input type="number" [(ngModel)]="product.price" /> </p>
+    <p> Returning: <input type="text" [(ngModel)]="product.returning" /> </p>
+    <p> Descount: <input type="number" [(ngModel)]="product.descount" /> </p>
+    <p>
+      <button (click)="createProduct()"> ADD </button>
+      <span *ngIf="result">
+        <p>{{product.name}} creado</p>
+      </span>
+
+    </p>
   </div>
-  
-  
+
+</div>

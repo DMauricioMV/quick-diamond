@@ -10,7 +10,6 @@ import { HomeComponent } from './GUI/home/home.component';
 import { ContactComponent } from './GUI/contact/contact.component';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
