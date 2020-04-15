@@ -1,9 +1,20 @@
 <div *ngFor="let product of products">
-    <span> {{product.id_producto }} </span>
-    <span> {{product.nombre_producto }} </span>
-    <span> {{product.precio_producto }} </span>
-    <span> {{product.descripcion_producto }} </span>
-    <span> <button (click)="deleteProduct(product.id_producto)"> Borrar </button> </span>
-    <span> <button (click)="editProduct(product)"> Editar </button> </span>
+  <span> {{product.id_producto }} </span>
+  <span> {{product.nombre_producto }} </span>
+  <span> {{product.precio_producto }} </span>
+  <span> {{product.descripcion_producto }} </span>
+  <span> <button (click)="deleteProduct(product.id_producto)"> Borrar </button> </span>
+  <span> <button (click)="showEdit(product.id_producto)"> Editar </button> </span>
 </div>
-<p>test</p>
+
+<div>
+  <span *ngIf="edit">
+    <p class="editWindow"></p>
+    Nombre: <input type="text" [(ngModel)]="nombre" />
+    Descripción: <input type="text" [(ngModel)]="descripcion" />
+    Precio: <input type="number" [(ngModel)]="precio" />
+
+    <button (click)="editProduct()"> Aceptar </button>
+  </span>
+  <br><br><br>
+</div>
